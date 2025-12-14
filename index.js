@@ -104,8 +104,8 @@ app.use((req, res, next) => {
   next();
 })
 
-app.get("/task", (req, res) => {
-    res.send("tasks home page");
+app.get("/", (req, res) => {
+    res.redirect("/posts");
 });
 
 app.use("/", userRouter);
