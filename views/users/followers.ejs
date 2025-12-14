@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate") %>
+
+<h2 class="mb-4">Followers</h2>
+
+<ul class="list-group">
+  <% if (followers.length === 0) { %>
+    <li class="list-group-item">No followers yet.</li>
+  <% } %>
+
+  <% followers.forEach(follower => { %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>@<%= follower.username %></span>
+
+      <% if (followingIds.includes(follower._id.toString())) { %>
+        <form action="/follow/unfollow/<%= follower._id %>" method="POST">
+          <button class="btn btn-secondary btn-sm">Unfollow</button>
+        </form>
+      <% } else { %>
+        <form action="/follow/<%= follower._id %>" method="POST">
+          <button class="btn btn-pink btn-sm">Follow back</button>
+        </form>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

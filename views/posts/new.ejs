@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow border-0 rounded-4 p-4">
+        <h4 class="fw-bold mb-3">Create New Post</h4>
+
+        <form action="/posts/new" method="POST">
+          <div class="mb-3">
+            <input
+              type="url"
+              name="image"
+              class="form-control"
+              placeholder="Image URL"
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <textarea
+              name="caption"
+              class="form-control"
+              rows="3"
+              placeholder="Write a caption..."
+            ></textarea>
+          </div>
+
+          <button class="btn btn-pink w-100 rounded-pill">
+            Post
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

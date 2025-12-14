@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold text-pink" href="/">Task1</a>
+
+    <ul class="navbar-nav mx-auto gap-4">
+
+      <li class="nav-item">
+        <a class="nav-link" href="/posts">Posts</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/followers">Followers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/following">Following</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/all">All users</a>
+      </li>
+
+    </ul>
+
+     <% if(!currUser) { %>
+        <a class="nav-link"  href="/signup"><b>Sign Up</b></a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+    <% }  %> 
+
+    <% if(currUser){ %>
+    <a href="/profile" class="btn btn-pink rounded-pill">
+      My Profile
+    </a>
+    <% } %>
+
+  </div>
+</nav>

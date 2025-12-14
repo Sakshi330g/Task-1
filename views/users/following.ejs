@@ -1,0 +1,23 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<h2 class="mb-4">Following</h2>
+
+<ul class="list-group">
+  <% if (following.length === 0) { %>
+    <li class="list-group-item">You are not following anyone.</li>
+  <% } else { %>
+
+    <% following.forEach(user => { %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>@<%= user.username %></span>
+
+        <form action="/follow/unfollow/<%= user._id %>" method="POST">
+          <button class="btn btn-danger btn-sm">Unfollow</button>
+        </form>
+      </li>
+    <% }) %>
+
+  <% } %>
+</ul>
+

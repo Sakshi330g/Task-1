@@ -1,0 +1,28 @@
+.btn.btn-pink {
+    background-color: #e83e8c;
+    color: white;
+  }
+  .btn.btn-pink:hover {
+    background-color: #d63384;
+    color: white;
+  }
+  .text-pink {
+    color: #e83e8c;
+  }
+
+  .post-link{
+    text-decoration: none;
+    color: inherit;
+  }
+  .img-wrapper {
+  background: url("<%= post.image %>") center/cover no-repeat;
+  padding: 20px;
+}
+  .post-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain; 
+}
+
+
+  
